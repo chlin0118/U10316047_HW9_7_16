@@ -9,7 +9,7 @@ public class TestSortTwoDArray{
 		//Print the Array's original order
 		printTwoDArray(TwoDimensionalArray);
 		
-		System.out.println("The Array's order after sorted is:");
+		System.out.println("\nThe Array's order after sorted is:");
 		//Sort the Array
 		sort(TwoDimensionalArray);
 		//Print the Array's sorted order
@@ -49,9 +49,17 @@ public class TestSortTwoDArray{
 		for(int row = 0;row < m.length; row++){
 			for(int column =0; column < m[row].length; column++){
 				//Print the element in each rows and columns
-				System.out.printf( "%-3d",m[row][column]);
+				if(column== 0)
+					System.out.print("(");
+					
+				System.out.print(m[row][column]);
+				
+				if((column+1) % m[row].length != 0)
+					System.out.print(",");
+				
+				if(column == m[row].length-1)
+					System.out.print( ") ");
 			}
-			System.out.println();
 		}
 	}
 }
